@@ -449,4 +449,121 @@
   transform: none;
 }
 
+@media (max-width: 768px) {
+  .topnav {
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    height: auto;
+  }
+
+  .topnav-buttons {
+    float: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.5rem;
+  }
+
+  .contentName {
+    position: relative;
+    width: 90%;
+    margin: 5rem 1.5rem 1rem;
+  }
+
+  .contentName h2:first-child {
+    font-size: 42px !important;
+  }
+
+  .contentName h2:nth-child(2) {
+    font-size: 52px !important;
+  }
+
+  .contentName p {
+    font-size: 18px !important;
+  }
+
+  .content {
+    position: relative;
+    bottom: auto;
+    width: 92%;
+    margin: 1rem auto 0;
+    padding: 2rem 1.25rem;
+  }
+
+  .bg {
+    height: 70vh;
+    background-attachment: scroll;
+  }
+
+  .projectmenu {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 0.5rem;
+  }
+
+  .dropdown {
+    width: min(100%, 320px);
+  }
+
+  .dropbtn {
+    width: 100%;
+    padding: 1rem 0.75rem;
+    font-size: 15px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .flex-item-white {
+    width: 92vw;
+    left: 4vw;
+    padding: 1rem;
+    margin-right: 0;
+  }
+
+  .square {
+    left: 0;
+    margin-right: 0;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .pie {
+    --w: 110px;
+    font-size: 12px;
+  }
+
+  .footerContainer {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topnav-buttons a {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .headingWhite {
+    font-size: 20px;
+  }
+
+  .content p,
+  .flex-item-white p {
+    font-size: 12px;
+  }
+
+  .dropdown-content a {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+}
+
 

@@ -1,0 +1,266 @@
+:root {
+  --orange-color: rgb(255, 94, 0);
+  --grey-color: #f4f4f4;
+  --darkgrey-color: #ccc;
+  --shadowlight: rgb(218, 215, 215);
+  --text-color: #1f1f1f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: white;
+  text-align: center;
+}
+
+.topnav {
+  overflow: hidden;
+  margin-right: 20px;
+  margin-left: 20px;
+  height: 72px;
+  width: 90%;
+  position: fixed;
+  z-index: 10;
+}
+
+.topnav-buttons {
+  display: flex;
+  float: right;
+  align-items: center;
+}
+
+.topnav-buttons a {
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.hover-3 {
+  --b: 0.1em;
+  --c: #000000;
+  color: #0000;
+  padding-block: var(--b);
+  border-bottom-right-radius: 225px 19px;
+  border-bottom-left-radius: 15px 255px;
+  background: linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 100%) / var(--_p, 0%) var(--b) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: background-size 0.3s;
+}
+
+.hover-3:hover {
+  --_p: 100%;
+}
+
+.close-link {
+  font-size: 1.1rem;
+}
+
+.headingDIV {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  font-family: inherit;
+  width: fit-content;
+  max-width: 90vw;
+  margin-top: 5rem;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  text-align: center;
+  border-bottom: solid 2px black;
+  border-bottom-right-radius: 250px 25px;
+  border-bottom-left-radius: -120px -10px;
+}
+
+.project-layout {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  padding: 2rem 5vw 4rem;
+  flex-wrap: wrap;
+}
+
+.viewer-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #444;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.viewer-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.viewer-frame img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  border: 0;
+  background: white;
+}
+
+.viewer-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  background: transparent;
+  color: gray;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.viewer-nav:first-child {
+  left: 0;
+}
+
+.viewer-nav:last-child {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.viewer-nav:hover {
+  background: var(--orange-color);
+}
+
+.info-card,
+.preview-card {
+  flex: 1 1 420px;
+  max-width: 640px;
+  background-color: white;
+  border: solid 2px lightgrey;
+  border-bottom-right-radius: 225px 19px;
+  border-bottom-left-radius: 15px 255px;
+  box-shadow: 5px 5px 10px grey;
+  padding: 20px;
+}
+
+.section-label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--orange-color);
+  margin-bottom: 1rem;
+}
+
+.info-card p,
+.info-card li {
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.info-card ul {
+  margin: 1rem 0 1.5rem 1.2rem;
+}
+
+.pdf-link {
+  display: inline-block;
+  padding: 0.85rem 1.4rem;
+  background: var(--orange-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.pdf-link:hover {
+  transform: translateY(-2px);
+}
+
+.preview-box {
+  height: 100%;
+  min-height: 320px;
+  background: linear-gradient(135deg, rgba(255, 94, 0, 0.12), rgba(0, 0, 0, 0.02));
+  border-radius: 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.preview-tag {
+  display: inline-block;
+  width: fit-content;
+  background: rgba(255, 94, 0, 0.12);
+  color: var(--orange-color);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.preview-box h3 {
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  margin-bottom: 0.75rem;
+}
+
+.preview-box p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .topnav {
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    height: auto;
+  }
+
+  .topnav-buttons {
+    float: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.5rem;
+  }
+
+  .project-layout {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .info-card,
+  .preview-card {
+    padding: 1.25rem;
+  }
+
+  .section-label {
+    font-size: 1.3rem;
+  }
+}
